@@ -1,0 +1,23 @@
+body {
+    color:navy;
+    font-family:Arial
+}
+h2 {
+    color:maroon
+}
+a {
+    color:blue
+}
+a:hover {
+    background-color:yellow
+}
+button {
+    border-radius: 15px;
+    background-color:yellow;
+    color:red;
+    font-size:large;
+    vertical-align:top
+}
+b {
+    color:green;
+}
