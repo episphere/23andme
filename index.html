@@ -1,21 +1,35 @@
-<link rel="stylesheet" href="23nme.css">
-<script src="23nme.js"></script>
-<p><span style="color:maroon">Interoperating with 23andMe</span>: [<a href="https://github.com/episphere/23andme" target="_blank">code</a>] [<a href="#" onclick="location.reload()">reload</a>]...</p><hr>
-<div id="nmeDiv">
-<h2>Interoperation</h2>
-<p>This Web application will explore the use of <a href="https://api.23andme.com/" target="_blank">23andMe's API</a> as <b>a mechanism to assess individual genomic cancer risk without moving the individue's data</b>. 
-This is achieved by moving the risk calculation code to the user's device, rather that having the users genomic data leave the user's own device. 
-That is, the sensitive information and prediction stays with the user, <b>the code does the travelling</b>. When ready to connect to your 23and me account click <button id="corntinueLogin" onclick="nme.ui()">Continue</button>.</p>
-<h2> Cancer Research</h2>
-<p>
-It also hypothecized that the user-first control of the data builds the necessary trust for those wanting to contribute to cancer research with their data to do so at their discretion.
-The resulting effect is that the the data contributed by those, and only those, that want to share it with researchers, is then used to fine tune <a href="https://sbu-bmi.github.io/healthBit/#" target="_blank">precision prevention models</a> tailorable for everybody.
-The same user-centric architecture (REST APIs scoped by OAUTH2) can be used to aggregate additional user derived data, such as <a href="https://sbu-bmi.github.io/healthBit/#" target="_blank">wearable sensors</a>, and <a href="http://www.hl7.org/fhir/smart-app-launch/" target="_blank">Electronic Medical Reccords</a>.
-Please note the exploratory nature of this tool. A more defenite use of this approach, with a potential usebase of 5 million 23andMe customers, would necessarily be pursued through <a href="https://research.23andme.com/research-innovation-collaborations/" target="_blank">23andMe Research Innovation Collaborations Program</a>.
-</p>
-<h2>User Engagement</h2>
-<p>
-It is interresting to note that this aggregation of user-controlled signals may create a particulalry compelling case for a different approach to user engagement through questionnaires that determine demographic, behavioral, environmental and familial risk factors.
-For example, the same questionnarie entry where a smoking habit is reported can be used to estimate the decrease of cancer risk if the habit is dropped. To achieve this result, this tool was developed as a PWA (<a href="https://developers.google.com/web/progressive-web-apps" target="_blank">Progressive Web Applications</a>).
-</p>
-</div>
+<html>
+<head>
+    <link rel="stylesheet" href="23nme.css">
+    <script src="23nme.js"></script>
+</head>
+<body>
+    <p><span style="color:maroon">Interoperating with 23andMe</span>: [<a href="https://github.com/episphere/23andme" target="_blank">code</a>] [<a href="#" onclick="location.reload()">reload</a>]...</p>
+    <hr>
+    <div id="nmeDiv">
+
+    <h2>Interoperation</h2>
+
+    <p>
+    This Web application will explore the use of <a href="https://api.23andme.com/" target="_blank">23andMe's API</a> as <b>a mechanism to assess individual genomic cancer risk without moving the individue's data</b>. 
+    This is achieved by moving the risk calculation code to the user's device, rather that having the users genomic data leave the user's own device. 
+    That is, the sensitive information and prediction stays with the user, <b>the code does the travelling</b>. When ready to connect to your 23and me account click <button id="corntinueLogin" onclick="nme.ui()">Continue</button>.
+    </p>
+
+    <h2> Cancer Research</h2>
+
+    <p>
+    It also hypothecized that the user-first control of the data builds the necessary trust for those wanting to contribute to cancer research with their data to do so at their discretion.
+    The resulting effect is that the the data contributed by those, and only those, that want to share it with researchers, is then used to fine tune <a href="https://sbu-bmi.github.io/healthBit/#" target="_blank">precision prevention models</a> tailorable for everybody.
+    The same user-centric architecture (REST APIs scoped by OAUTH2) can be used to aggregate additional user derived data, such as <a href="https://sbu-bmi.github.io/healthBit/#" target="_blank">wearable sensors</a>, and <a href="http://www.hl7.org/fhir/smart-app-launch/" target="_blank">Electronic Medical Reccords</a>.
+    Please note the exploratory nature of this tool. A more defenite use of this approach, with a potential usebase of 5 million 23andMe customers, would necessarily be pursued through <a href="https://research.23andme.com/research-innovation-collaborations/" target="_blank">23andMe Research Innovation Collaborations Program</a>.
+    </p>
+
+    <h2>User Engagement</h2>
+
+    <p>
+    It is interresting to note that this aggregation of user-controlled signals may create a particulalry compelling case for a different approach to user engagement through questionnaires that determine demographic, behavioral, environmental and familial risk factors.
+    For example, the same questionnarie entry where a smoking habit is reported can be used to estimate the decrease of cancer risk if the habit is dropped. To achieve this result, this tool was developed as a PWA (<a href="https://developers.google.com/web/progressive-web-apps" target="_blank">Progressive Web Applications</a>).
+    </p>
+    </div>
+</body>
