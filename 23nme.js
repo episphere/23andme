@@ -2,7 +2,10 @@ console.log('23nme.js loaded');
 
 (function(){
 
-const nme={}
+const nme={ // you'll need your own client id and "secret"
+  client_id: '09568fd79aa7911dad7727a024936f8d',
+  client_secret: '106cb5038da2e9e33e987ec69cf05b1b' // only a secret if you need to proxy the application
+}
 
 nme.parms={
     intro:false, //date after continue
@@ -14,12 +17,17 @@ nme.ui=function(div){
     if(nme.div){
         nme.parms.intro=Date.now()
         localStorage.nmeParms=JSON.stringify(nme.parms)
-        let h = 'under development'
+        let h = '...'
         nme.div.innerHTML=h
     }
 }
  nme.reset=function(){
-     nme.parms=JSON.parse(localStorage.nmeParms)
+     if(localStorage.nmeParms){
+       nme.parms=JSON.parse(localStorage.nmeParms)
+     }else{
+       nme.parms={}
+     }
+     
      nme.parms.intro=0 // reset time
      localStorage.nmeParms=JSON.stringify(nme.parms)
      location.reload()
