@@ -1,0 +1,8 @@
+<script src="https://api.23andme.com/res/js/ttam-0.3.js"></script>
+<div id="wrapper">Button...</div>
+<script>
+    window.onload = function () {
+        var ttam = TTAM('09568fd79aa7911dad7727a024936f8d');
+        ttam.connectButton('wrapper', ["basic", "rs1234"]);
+    };
+</script>

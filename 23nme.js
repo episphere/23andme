@@ -12,13 +12,22 @@ nme.parms={
 
 }
 
-nme.ui=function(div){
+nme.ui=async function(div){
     nme.div=div||document.getElementById('nmeDiv')
     if(nme.div){
         nme.parms.intro=Date.now()
         localStorage.nmeParms=JSON.stringify(nme.parms)
         let h = '...'
+        //let h = `<a href="https://api.23andme.com/authorize/?redirect_uri=http://localhost:8000/23andme/&response_type=code&client_id=09568fd79aa7911dad7727a024936f8d&client_secret=106cb5038da2e9e33e987ec69cf05b1b&scope=basic rs123">Connect with 23andMe</a>`
         nme.div.innerHTML=h
+        //location.href='https://api.23andme.com/authorize/?'
+        let res = await (await fetch('https://api.23andme.com/authorize/',{
+            method:"POST",
+            body: JSON.stringify({
+               redirect_uri:"http://localhost:8000/23andme/"
+            })
+        })).json()
+        console.log(res)        
     }
 }
  nme.reset=function(){
